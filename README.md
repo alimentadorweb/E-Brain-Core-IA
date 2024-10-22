@@ -1,4 +1,4 @@
-# AreadeBroca_IA
+# AreadeBroca_IA - Cerebro Positronico para Protesis roboticas
 
 #inteligencia artificial que intenta replicar el Area de Broca en el Cerebro Humano, en su version digital
 #proyecto open source
