@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presentación del Cerebro Humano</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #001f3f, #005f7f); /* Degradado azul oscuro */
+            color: white;
+            margin: 0;
+            padding: 5px;
+            height: 100vh; /* Asegura que el fondo cubra toda la altura de la ventana */
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Centra el contenido verticalmente */
+        }
+        h1 {
+            text-align: center;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+        p {
+            text-align: center;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+        .cerebro {
+            position: relative;
+            width: 600px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+
+           .recuerdo {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            background-color: rgba(0, 150, 0, 0.6);
+            border-radius: 50%;
+            text-align: center;
+            line-height: 30px;
+            color: white;
+            font-weight: bold;
+            animation: float 3s ease-in-out infinite;
+        }
+
+
+        @keyframes float {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-15px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>CEREBRO POSITRONICO IA</h1>
+    <P>Simulacion de ubicacion de recuerdos en cerebro positronico</P>
+    <div class="cerebro">
+        <img src="cerebro.jpg" alt="Cerebro Humano" style="width: 100%;">
+    </div>
+       <script>
+        const numRecuerdos = 25;
+
+        function cargarRecuerdo(indice) {
+            return fetch(`recuerdos/recuerdo_n${indice + 1}.csv`)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`Error al cargar recuerdo ${indice + 1}: ${response.statusText}`);
+                    }
+                    return response.text();
+                })
+                .then(data => {
+                    const valor = data.trim();
+                    return { indice: indice + 1, valor: valor };
+                });
+        }
+
+        Promise.all([...Array(numRecuerdos).keys()].map(cargarRecuerdo))
+            .then(recuerdos => {
+                const cerebroDiv = document.querySelector('.cerebro');
+                recuerdos.forEach(recuerdo => {
+                    const divRecuerdo = document.createElement('div');
+                    divRecuerdo.className = 'recuerdo';
+                    divRecuerdo.style.top = `${Math.random() * 300}px`;
+                    divRecuerdo.style.left = `${Math.random() * 400}px`;
+                    divRecuerdo.title = `Recuerdo ${recuerdo.indice}: ${recuerdo.valor}`;
+                    divRecuerdo.textContent = recuerdo.indice;
+                    cerebroDiv.appendChild(divRecuerdo);
+                });
+            })
+            .catch(error => console.error('Error al cargar los recuerdos:', error));
+    </script>
+    <p>V1.0 Arq de sistema David Arriaga <a href="https://x.com/alimentadorweb" target="_blank">https://x.com/alimentadorweb</a></p>
+ </body>
+</html>
