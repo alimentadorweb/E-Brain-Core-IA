@@ -9,4 +9,4 @@ Objetivo de proyecto, recrear un cerebro positronico, que ayude a conectar parte
 David Arriaga | El Salvador, Centro America alimentadorweb@gmail.com
 
 Simulacion de Recuerdos:
-https://github.com/alimentadorweb/CerebroPositronicoIA/blob/main/simuladorCerebroPositronico/screenShotSimulador.png
+<img src="https://github.com/alimentadorweb/CerebroPositronicoIA/blob/main/simuladorCerebroPositronico/screenShotSimulador.png" />
