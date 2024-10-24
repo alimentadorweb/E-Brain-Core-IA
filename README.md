@@ -7,3 +7,6 @@ Nota el  24 de Octubre de 2024 migramos de Java a Python la razon es el peso en 
 Objetivo de proyecto, recrear un cerebro positronico, que ayude a conectar partes roboticas al cuerpo humano usando un casco y diferentes sensores
  
 David Arriaga | El Salvador, Centro America alimentadorweb@gmail.com
+
+Simulacion de Recuerdos:
+https://github.com/alimentadorweb/CerebroPositronicoIA/blob/main/simuladorCerebroPositronico/screenShotSimulador.png
