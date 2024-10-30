@@ -8,6 +8,18 @@ Objetivo de proyecto, recrear un cerebro positronico, que ayude a conectar parte
 
 Para Ejecutar el Cerebro positronico Bastara este comando:  python -m bulboraquideo.bulbo_raquideo
  
+ Resultado Esperado:
+<code>
+**Iniciando el Cerebro Positronico...**
+**Iniciando captura de datos sensoriales...**
+**Datos auditivos capturados**
+**Datos visuales capturados**
+**Datos sensoriales almacenados.**
+**Ejecutando acción: mover a la derecha**
+**Deteniendo captura de datos sensoriales...**
+**Cerebro Positronico detenido.**
+</code>
+
 David Arriaga | El Salvador, Centro America alimentadorweb@gmail.com
 
 Simulacion de Recuerdos:
