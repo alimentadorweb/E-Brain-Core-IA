@@ -4,7 +4,17 @@ from gestiondesensores import SensorAuditivo, SensorVision
 from procesamiento import ProcesadorSensorial
 from control import ControladorMotor
 from memoria import GestorMemoria
+import serial
 
+def inicializar_arduino():
+    try:
+        arduino = serial.Serial('/dev/ttyUSB0', 9600, timeout=1)
+        print("Conexión con Arduino establecida")
+        return arduino
+    except serial.SerialException:
+        print("Error al conectar con Arduino")
+        return None
+    
 def main():
     print("Iniciando el Cerebro Positronico...")
     
