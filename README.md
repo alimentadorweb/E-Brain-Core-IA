@@ -94,5 +94,7 @@ I2C o SPI para comunicación con múltiples dispositivos
 
 David Arriaga | El Salvador, Centro America alimentadorweb@gmail.com
 
-Simulacion de Recuerdos:
+
 <img src="https://github.com/alimentadorweb/CerebroPositronicoIA/blob/main/cerebroIA.png" />
+
+<p>Simulacion de Recuerdos, en version grafica etapa 1<p>
