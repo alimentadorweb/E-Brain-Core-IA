@@ -24,3 +24,29 @@ class MotorMovimiento:
     def mover(self, accion):
         # Lógica para mover el motor según la acción
         print(f"Ejecutando acción: {accion}")
+
+class SensorProximidad:
+    def __init__(self):
+        self.arduino = self.inicializar_arduino()
+
+    def inicializar_arduino(self):
+        # Aquí va la lógica para inicializar el sensor de proximidad
+        # Por ejemplo, puedes usar la biblioteca `serial` para conectarte al Arduino
+        return True  # Simulamos que el sensor está conectado
+
+    def capturar(self):
+        # Lógica para capturar datos del sensor de proximidad
+        return "Datos de proximidad capturados"
+
+
+class SensorTemperatura:
+    def __init__(self):
+        self.arduino = self.inicializar_arduino()
+
+    def inicializar_arduino(self):
+        # Aquí va la lógica para inicializar el sensor de temperatura
+        return True  # Simulamos que el sensor está conectado
+
+    def capturar(self):
+        # Lógica para capturar datos del sensor de temperatura
+        return "Datos de temperatura capturados"

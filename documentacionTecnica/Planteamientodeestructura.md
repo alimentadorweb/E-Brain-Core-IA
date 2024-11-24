@@ -102,29 +102,79 @@ Imagina que tienes una instrucción recibida en el LóbuloFrontal para realizar 
 4. Finalmente, Neurona_AjusteMotorFino ejecuta la acción con precisión.
 
 
-Ejemplo Completo de Estructura
+Mapa de Arbol del proyecto
 
-SistemaNerviosoCentral/cerebro
-├── bulboRaquideo/
-│   ├── capaDeEtica/
-│   ├── gestionDeProcesos/
-│   ├── interfazDeUsuario/
-│   └── tomaDeDecisiones/
-├── Cerebelo/
-│   ├── controlDeMotor/
-│   ├── Equilibrio/
-│   └── Coordinación/
-├── lobuloFrontal/
-│   ├── aprendizaje/
-│   ├── memoriaCortoPlazo/
-│   └── memoriaLargoPlazo/
-└── lobuloParietal/
-|    ├── sentidoDelTacto/
-└── lobuloTemporal/
-|    ├── sensorAuditivo/
-└── lobuloOccipital/
-|    ├── sensorDeVision/
+Cerebro Positrónico
+│
+├── cerebro
+│   │
+│   ├── bulboRaquideo
+│   │   ├── __init__.py
+│   │   ├── bulbo_raquideo.py
+│   │   ├── gestionDeSensores
+│   │   │   ├── __init__.py
+│   │   │   └── sensores.py
+│   │   ├── memoria
+│   │   │   ├── __init__.py
+│   │   │   └── gestor_memoria.py
+│   │   ├── procesamiento
+│   │   │   ├── __init__.py
+│   │   │   └── procesador_sensorial.py
+│   │   └── control
+│   │       ├── __init__.py
+│   │       └── controlador_motor.py
+│   │
+│   ├── lobuloFrontal
+│   │   ├── memoriaCortoPlazo.py
+│   │   ├── memoriaLargoPlazo.py
+│   │   └── ...
+│   │
+│   ├── cerebelo
+│   │   ├── controlMotor.py
+│   │   ├── equilibrio.py
+│   │   └── ...
+│   │
+│   ├── lobuloParietal
+│   │   ├── sentidoDelTacto.py
+│   │   └── ...
+│   │
+│   ├── lobuloTemporal
+│   │   ├── sensorAuditivo
+│   │   └── ...
+│   │
+│   ├── lobuloOccipital
+│   │   ├── sensorDeVision
+│   │   └── ...
+│   │
+│   └── neuronas
+│       ├── NeuronaEjemplo1.py
+│       ├── NeuronaEjemplo2.py
+│       └── ...
+│
+└── README.md
 
+Descripción del Mapa de Árbol
+
+Cerebro Positrónico: Es la carpeta raíz que contiene todo el proyecto.
+
+cerebro: Carpeta principal que agrupa todas las funcionalidades del sistema.
+
+bulboRaquideo: Contiene la lógica principal del sistema, la gestión de sensores, memoria, procesamiento y control.
+
+gestionDeSensores: Maneja la interacción con los sensores.
+
+memoria: Se encarga de almacenar y recuperar información.
+
+procesamiento: Procesa los datos capturados por los sensores.
+
+control: Controla las acciones a ejecutar.
+
+lobuloFrontal, cerebelo, lobuloParietal, lobuloTemporal, lobuloOccipital: Estas carpetas representan diferentes áreas del cerebro y pueden contener scripts relacionados con las funciones específicas de cada área.
+
+neuronas: Contiene ejemplos de "neuronas" que representan bloques de procesamiento.
+
+README.md: Archivo de documentación del proyecto.
+Este mapa de árbol proporciona una visión clara de la estructura del sistema y ayuda a organizar y gestionar el código de manera efectiva.
 
 Ventaja de Esta Estructura
 

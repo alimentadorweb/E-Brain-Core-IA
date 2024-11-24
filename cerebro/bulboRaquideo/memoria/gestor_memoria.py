@@ -1,12 +1,16 @@
 # memoria/gestor_memoria.py
 
+from lobuloFrontal.memoriaCortoPlazo import MemoriaCortoPlazo
+
 class GestorMemoria:
     def __init__(self):
         self.datos_sensoriales = []
         self.decisiones = []
+        self.memoria_corto_plazo = MemoriaCortoPlazo()  # Instancia de memoria a corto plazo
 
     def almacenar_datos_sensoriales(self, datos):
         self.datos_sensoriales.append(datos)
+        self.memoria_corto_plazo.almacenar(datos)  # Almacenar en memoria a corto plazo
         print("Datos sensoriales almacenados.")
 
     def obtener_datos_recientes(self):
