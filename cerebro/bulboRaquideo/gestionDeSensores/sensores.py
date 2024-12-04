@@ -1,52 +1,56 @@
-# gestiondesensores/sensores.py
-
-import serial
+# sensores.py
 
 class SensorAuditivo:
     def __init__(self):
-        self.arduino = serial.Serial('/dev/ttyUSB0', 9600)  # Ajusta el puerto según tu sistema
-    
-    def capturar(self):
-        self.arduino.write(b'AUDIO\n')  # Comando para Arduino
-        datos = self.arduino.readline()
-        return f"Datos auditivos capturados: {datos.decode().strip()}"
+        # Inicialización del sensor auditivo
+        self.arduino = self.conectar_a_arduino()
+
+    def conectar_a_arduino(self):
+        # Lógica para conectar el sensor auditivo a Arduino
+        # Simulando que la conexión falla
+        print("Intentando conectar el sensor auditivo...")
+        return None  # Cambia esto a un objeto real si la conexión es exitosa
 
 class SensorVision:
     def __init__(self):
-        self.arduino = serial.Serial('/dev/ttyUSB0', 9600)  # Ajusta el puerto según tu sistema
-    
-    def capturar(self):
-        self.arduino.write(b'VISION\n')  # Comando para Arduino
-        datos = self.arduino.readline()
-        return f"Datos visuales capturados: {datos.decode().strip()}"
+        # Inicialización del sensor de visión
+        self.arduino = self.conectar_a_arduino()
 
-class MotorMovimiento:
-    def mover(self, accion):
-        # Lógica para mover el motor según la acción
-        print(f"Ejecutando acción: {accion}")
+    def conectar_a_arduino(self):
+        # Lógica para conectar el sensor de visión a Arduino
+        print("Intentando conectar el sensor auditivo...")
+        return None  # Simulando que la conexión fue exitosa
 
 class SensorProximidad:
     def __init__(self):
-        self.arduino = self.inicializar_arduino()
+        # Inicialización del sensor de proximidad
+        self.arduino = self.conectar_a_arduino()
 
-    def inicializar_arduino(self):
-        # Aquí va la lógica para inicializar el sensor de proximidad
-        # Por ejemplo, puedes usar la biblioteca `serial` para conectarte al Arduino
-        return True  # Simulamos que el sensor está conectado
-
-    def capturar(self):
-        # Lógica para capturar datos del sensor de proximidad
-        return "Datos de proximidad capturados"
-
+    def conectar_a_arduino(self):
+        # Lógica para conectar el sensor de proximidad a Arduino
+        print("Intentando conectar el sensor Proximidad...")
+        return None  # Simulando que la conexión fue exitosa
 
 class SensorTemperatura:
     def __init__(self):
-        self.arduino = self.inicializar_arduino()
+        # Inicialización del sensor de temperatura
+        self.arduino = self.conectar_a_arduino()
 
-    def inicializar_arduino(self):
-        # Aquí va la lógica para inicializar el sensor de temperatura
-        return True  # Simulamos que el sensor está conectado
+    def conectar_a_arduino(self):
+        # Lógica para conectar el sensor de temperatura a Arduino
+        print("Intentando conectar el sensor Temperatura...")
+        return None  # Simulando que la conexión fue exitosa
 
-    def capturar(self):
-        # Lógica para capturar datos del sensor de temperatura
-        return "Datos de temperatura capturados"
+class MotorMovimiento:
+    def __init__(self):
+        # Inicialización del motor de movimiento
+        self.arduino = self.conectar_a_arduino()
+
+    def conectar_a_arduino(self):
+        # Lógica para conectar el motor a Arduino
+        print("Intentando conectar el sensor Movimiento...")
+        return None  # Simulando que la conexión fue exitosa
+
+    def mover(self, direccion):
+        # Lógica para mover el motor en una dirección específica
+        print(f'Moviendo el motor en la dirección: {direccion}')

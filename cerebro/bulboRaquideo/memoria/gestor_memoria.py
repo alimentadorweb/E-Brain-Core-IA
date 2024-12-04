@@ -1,6 +1,8 @@
-# memoria/gestor_memoria.py
-
-from lobuloFrontal.memoriaCortoPlazo import MemoriaCortoPlazo
+from ...lobuloFrontal.memoriaCortoPlazo import MemoriaCortoPlazo
+class GestorMemoria:
+    def __init__(self):
+        # Initialization code here
+        pass
 
 class GestorMemoria:
     def __init__(self):

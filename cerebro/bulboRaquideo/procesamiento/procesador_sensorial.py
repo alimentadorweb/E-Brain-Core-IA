@@ -1,6 +1,6 @@
 # procesamiento/procesador_sensorial.py
 
-from .gestiondesensores.sensores import SensorAuditivo, SensorVision, SensorProximidad, SensorTemperatura
+from cerebro.bulboRaquideo.gestionDeSensores.sensores import SensorAuditivo, SensorVision, SensorProximidad, SensorTemperatura
 
 class ProcesadorSensorial:
     def __init__(self):
@@ -17,8 +17,8 @@ class ProcesadorSensorial:
 
     def procesar_datos_sensoriales(self):
         # Captura datos de todos los sensores
-        datos_auditivos = self.sensor_auditivo.capturar() if self.sensor_auditivo.arduino.is_open else "Sensor auditivo no conectado"
-        datos_visuales = self.sensor_vision.capturar() if self.sensor_vision.arduino.is_open else "Sensor de visión no conectado"
+        datos_auditivos = self.sensor_auditivo.capturar() if self.sensor_auditivo.arduino and self.sensor_auditivo.arduino.is_open else "Sensor auditivo no conectado"
+        datos_visuales = self.sensor_vision.capturar() if self.sensor_vision.arduino and self.sensor_vision.arduino.is_open else "Sensor de visión no conectado"
         datos_proximidad = self.sensor_proximidad.capturar() if self.sensor_proximidad.arduino else "Sensor de proximidad no conectado"
         datos_temperatura = self.sensor_temperatura.capturar() if self.sensor_temperatura.arduino else "Sensor de temperatura no conectado"
 
