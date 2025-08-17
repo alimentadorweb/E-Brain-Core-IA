@@ -1,6 +1,6 @@
 # Commercial License Agreement for E-Brain Core IA
 
-Copyright (c) 2025 David Arriaga
+Copyright (c) 2025 David Arriaga | https://github.com/alimentadorweb
 
 ## Overview
 This document outlines the terms for companies or institutions wishing to use **E-Brain Core IA** 
