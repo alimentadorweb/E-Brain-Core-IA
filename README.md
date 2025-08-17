@@ -1,117 +1,85 @@
-# Cerebro Positronico IA 
-# inteligencia artificial que replica un cerebro Humano, en su version digital
-Proyecto open source, lenguaje de programacion en Python 3.0
+# 🧠 E-Brain Core IA  
+**Electronic Brain Connect Core with Integrated AI**
 
-Nota el  24 de Octubre de 2024 migramos de Java a Python la razon es el peso en kb que se generaba cuando el cerebro se ejecutaba creando un entorno imposible para la ejecucion en hardware robotico aun creando multiples hilos, ademas cambiamos el nombre de areadebroca_ia a cerebroPositronico_IA
+---
 
-Objetivo de proyecto, recrear un cerebro positronico, que ayude a conectar partes roboticas al cuerpo humano usando un casco y diferentes sensores
+## 📌 Overview
+**E-Brain Core IA** is a **hybrid cognitive system** designed as an *electronic brain* to bridge humans and machines.  
+It combines **real-time sensor and actuator control** with a **lightweight AI engine** (TinyLlama or similar) for analysis, adaptive decision-making, and memory simulation.  
 
-Para Ejecutar el Cerebro positronico Bastara este comando:  python -m cerebro.bulboRaquideo.bulbo_raquideo
- 
- Nota: debes estar en la carpeta CerebroPositronicoIA
- Resultado Esperado:
-<code>
-Iniciando el Cerebro Positronico...
-Intentando conectar el sensor auditivo...
-Intentando conectar el sensor auditivo...
-Intentando conectar el sensor Proximidad...
-Intentando conectar el sensor Temperatura...
-Comprobando sensores...
-Comprobando Sensor Auditivo...
-Sensor Auditivo: DESCONECTADO
-Comprobando Sensor de Visión...
-Sensor de Visión: DESCONECTADO
-Comprobando Sensor de Proximidad...
-Sensor de Proximidad: DESCONECTADO
-Comprobando Sensor de Temperatura...
-Sensor de Temperatura: DESCONECTADO
-Comprobación de sensores finalizada.
-Intentando conectar el sensor auditivo...
-Intentando conectar el sensor auditivo...
-Intentando conectar el sensor Proximidad...
-Intentando conectar el sensor Temperatura...
-Conexión con Arduino establecida
-Datos almacenados en memoria a corto plazo.
-Datos sensoriales almacenados.
-Moviendo el motor en la dirección: derecha
-Cerebro Positronico detenido.
-</code>
+Inspired by the concept of a *positronic brain*, E-Brain Core IA aims to become the **core prosthetic brain** for assistive robotics, prosthetics, and wearable devices.
 
-**HardWare Recomendado para hacer Pruebas.**
+---
 
-**Sensores Compatibles con Arduino:**
+## 🚀 Vision
+To create an **international open-source cognitive platform** that empowers:
+- **Medical rehabilitation** → control of prosthetics and exoskeletons.  
+- **Assistive technologies** → real-time monitoring and safety systems.  
+- **Human–machine interfaces** → intuitive connection between humans and digital/robotic systems.  
+- **Cognitive and emotional support** → hybrid AI capable of analyzing human input and providing guidance.  
 
-**Sensores Auditivos:**
-Módulo KY-038 (sensor de sonido)
-Módulo MAX9814 (micrófono amplificado)
-Módulo LM393 (detector de sonido)
-**Sensores Visuales:**
-Módulo OV7670 (cámara VGA)
-Sensor Pixy2 (cámara con procesamiento)
-Módulo HC-SR04 (sensor ultrasónico para detección de distancia)
-Fotoresistencias LDR (para detección de luz)
-**Actuadores/Motores:**
-Servomotores (para movimientos precisos)
-Motores DC con driver L298N
-Motores paso a paso con driver A4988
-Módulo de relés para control de dispositivos
-Placas Arduino Recomendadas:
+---
 
-**Arduino Mega 2560:**
-Más pines y memoria que el Arduino UNO
-Mejor para proyectos complejos
-Más puertos seriales
-**Arduino UNO:**
-Bueno para prototipos iniciales
-Compatible con la mayoría de shields
-Fácil de programar
+## 🧩 System Architecture
+E-Brain Core IA is structured as a **modular brain-inspired system**:
 
-Ejemplo de codigo de conexion en Arduino hacia el cerebro positronico:
+1. **Perception** → sensors (EMG, IMU, audio, proximity, vision, temperature).  
+2. **Processing** → feature extraction, signal normalization, memory (short/long-term).  
+3. **Decision** → classifiers, adaptive thresholds, AI-based reasoning.  
+4. **Actuation** → motors, prosthetics, exoskeletons, or external devices.  
+5. **Feedback** → haptic, visual, or auditory responses to the user.  
 
-<code>
-// Código para Arduino
-void setup() {
-  Serial.begin(9600);
-  // Configurar pines para sensores y actuadores
-}
+---
 
-void loop() {
-  // Leer sensores
-  int datosSensor = analogRead(A0);
-  
-  // Enviar datos al Cerebro Positrónico
-  Serial.println(datosSensor);
-  
-  // Recibir comandos
-  if (Serial.available() > 0) {
-    String comando = Serial.readStringUntil('\n');
-    // Ejecutar acción según el comando
-  }
-}
-</code>
+## 🛠️ MVP – Minimum Viable Prototype
+- **Hardware**:  
+  - Arduino UNO/Mega (or ESP32)  
+  - 2–4 EMG channels (MyoWare or similar)  
+  - 1–3 servo motors (basic prosthetic gripper)  
+  - Vibromotors for haptic feedback  
 
-**Recomendaciones Adicionales:**
+- **Software**:  
+  - Real-time signal acquisition (1 kHz sampling)  
+  - Filtering, rectification, and RMS calculation  
+  - Simple classifier (threshold + LDA) for open/close gesture  
+  - PWM motor control + safety watchdog  
+  - Feedback vibration when force threshold is exceeded  
 
-**Protección:**
-Usa resistencias pull-up/pull-down según necesites
-Protege los pines con resistencias limitadoras de corriente
-Considera usar optoacopladores para aislar circuitos
-**Alimentación:**
-Usa una fuente de alimentación externa para los motores
-Mantén separadas las tierras de potencia y señal
-Considera usar capacitores de desacoplo
-**Expansión:**
-Puedes usar múltiples Arduinos para diferentes funciones
-Considera usar un multiplexor para más sensores
-I2C o SPI para comunicación con múltiples dispositivos
+---
 
-**Asegúrate de instalar la biblioteca pyserial en tu entorno virtual**
+## 📜 Roadmap
+- **Stage 1**: Sensor & motor simulation (reflex loops).  
+- **Stage 2**: Prosthetic prototype (hand/gripper).  
+- **Stage 3**: Adaptive memory and decision-making.  
+- **Stage 4**: Integration of **TinyLlama** (lightweight LLM) for real-time analysis.  
+- **Stage 5**: Wearable form (portable cognitive brain for assistive devices).  
 
-<code>pip install pyserial desde python </code>
+---
 
-David Arriaga | El Salvador, Centro America alimentadorweb@gmail.com
+## 🔐 License
+This project is licensed under the **MPL 2.0** license.  
+- Open source usage is free as long as modifications to existing source files remain open.  
+- For **commercial/proprietary usage** without code disclosure, please contact the author for a **commercial license option**.  
 
+---
 
-<img src="https://github.com/alimentadorweb/CerebroPositronicoIA/blob/main/cerebroIA.png" />
+## 🌍 International Scope
+All documentation is provided in **English** to ensure accessibility for researchers, companies, and collaborators worldwide.  
 
-<p>Simulacion de Recuerdos, en version grafica etapa 1<p>
+---
+
+## 🤝 Contributing
+Contributions are welcome!  
+- Fork the repository  
+- Create your feature branch (`git checkout -b feature/my-feature`)  
+- Commit changes (`git commit -m 'Add new feature'`)  
+- Push to the branch (`git push origin feature/my-feature`)  
+- Open a Pull Request  
+
+---
+
+## 📧 Contact
+Author: **David Arriaga**  
+Project: **E-Brain Core IA**  
+Purpose: *Building the next-generation electronic prosthetic brain with IA*  
+
