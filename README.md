@@ -52,7 +52,9 @@ E-Brain Core IA is structured as a **modular brain-inspired system**:
 - **Stage 2**: Prosthetic prototype (hand/gripper).  
 - **Stage 3**: Adaptive memory and decision-making.  
 - **Stage 4**: Integration of **TinyLlama** (lightweight LLM) for real-time analysis.  
-- **Stage 5**: Wearable form (portable cognitive brain for assistive devices).  
+- **Stage 5**: Wearable form (portable cognitive brain for assistive devices).
+
+- Current status: Stage 3 - 16/08/2025
 
 ---
 
@@ -81,5 +83,6 @@ Contributions are welcome!
 ## 📧 Contact
 Author: **David Arriaga**  
 Project: **E-Brain Core IA**  
+Email: ebraincoreia@gmail.com
 Purpose: *Building the next-generation electronic prosthetic brain with IA*  
 
