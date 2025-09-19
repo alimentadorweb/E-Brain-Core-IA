@@ -1,4 +1,5 @@
-from ...frontalLobe.shortTermMemory import ShortTermMemory
+# memory_manager.py
+from brain.frontalLobe.shortTermMemory import ShortTermMemory
 
 class MemoryManager:
     def __init__(self):

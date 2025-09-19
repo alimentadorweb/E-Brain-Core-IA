@@ -1,9 +1,16 @@
 # processing/sensory_processor.py
 
-from brain.medullaOblongata.sensorManagement.sensors import AuditorySensor, VisionSensor, ProximitySensor, TemperatureSensor
+from ..sensorManagement.sensors import (
+    AuditorySensor,
+    VisionSensor,
+    ProximitySensor,
+    TemperatureSensor,
+)
+
 
 class SensoryProcessor:
     def __init__(self):
+        print("Initializing Sensory Processor...")
         self.auditory_sensor = AuditorySensor()
         self.vision_sensor = VisionSensor()
         self.proximity_sensor = ProximitySensor()
@@ -37,6 +44,8 @@ class SensoryProcessor:
             if self.temperature_sensor.arduino
             else "Temperature sensor not connected"
         )
+
+        print("Sensory data captured successfully.")
 
         return {
             "auditory": auditory_data,
